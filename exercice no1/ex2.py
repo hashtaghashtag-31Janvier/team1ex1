@@ -1,35 +1,44 @@
+import string
+import random
+
 def main():
 
-	tirage = tirageFunc()
-	print('Tirage : ' + tirage)
+    #tirage = tirageFunc()
+    tirage = ['a', 'b', 'c']
+    print tirage
 
-	solution = []
-	nbSolution = 0
-	nbLettres = 9
-	aucunMotTrouve = True
-	chaine = tirage
-	dick = open("Dictionnaire.txt", "r")
+    solution = []
+    nbSolution = 0
+    nbLettres = 9
+    aucunMotTrouve = True
+    dick = open("Dictionnaire2.txt", "r")
 
+    chaine = ''.join(tirage)
 
-	while nbLettres > 0 && aucunMotTrouve:
-		while 
+    while (aucunMotTrouve):
 
-	for ligne in dick:
-    	if chaine in ligne:
-        	aucunMotTrouve = False
-         	solution[nbSolution]
-        	nbSolution = nbSolution +1
-        	solution[]
-	
-	dick.close()
+        for ligne in dick:
+            print chaine
+            if chaine in ligne:
+                print "test2"
+                aucunMotTrouve = False
+                print "trouve"
+                #solution[nbSolution] = ligne
+                nbSolution = nbSolution +1
+                    #solution[]
+        if (len(chaine)> 1):
+            chaine = chaine[:-1]
+            print chaine
+
+	#dick.close()
 
 
 
 def tirageFunc():
 
-	tirage = []
-	import string
-	import random
-	for x in range(1,9):
+	tirage = [None] * 9
+	for x in range(0,9):
 		tirage[x] = random.choice(string.letters)
 	return tirage
+
+main()
